@@ -8,7 +8,12 @@
     <bean id="house" class="lindx.spring.core.beans.House">
         <property name="humberOfFlors" value="5" />
         <property name="numderOfFlats" value="200" />
+        <property name="address" ref="address" />
+    </bean>
 
+    <bean id="address" class="lindx.spring.core.beans.Address" >
+        <constructor-arg index="0" value="Lenina"></constructor-arg>
+        <constructor-arg index="1" value="5"></constructor-arg>
     </bean>
 
 </beans>
