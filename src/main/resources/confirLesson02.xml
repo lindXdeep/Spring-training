@@ -5,10 +5,10 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="house" class="lindx.spring.core.beans.House">
+    <bean id="house" class="lindx.spring.core.beans.House" autowire="byType">
         <property name="humberOfFlors" value="5" />
         <property name="numderOfFlats" value="200" />
-        <property name="address" ref="address" />
+        <!-- <property name="address" ref="address" /> -->
     </bean>
 
     <bean id="address" class="lindx.spring.core.beans.Address" >
