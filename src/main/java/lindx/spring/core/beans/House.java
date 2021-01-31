@@ -4,7 +4,7 @@ public class House {
     private int humberOfFlors;
     private int numderOfFlats;
     private Address address;
-
+    
     public int getHumberOfFlors() {
         return this.humberOfFlors;
     }

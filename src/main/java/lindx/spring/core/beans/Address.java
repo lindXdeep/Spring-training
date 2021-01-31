@@ -2,13 +2,18 @@ package lindx.spring.core.beans;
 
 public class Address {
     private String street;
-    private String numderOFHouse;
+    private int numderOFHouse;
 
-    public String getNumderOFHouse() {
+    public Address(String street, int numderOFHouse) {
+        this.street = street;
+        this.numderOFHouse = numderOFHouse;
+    }
+
+    public int getNumderOFHouse() {
         return this.numderOFHouse;
     }
 
-    public void setNumderOFHouse(String numderOFHouse) {
+    public void setNumderOFHouse(int numderOFHouse) {
         this.numderOFHouse = numderOFHouse;
     }
 
