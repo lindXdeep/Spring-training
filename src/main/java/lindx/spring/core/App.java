@@ -2,25 +2,33 @@ package lindx.spring.core;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import lindx.spring.core.beans.Car;
+import lindx.spring.core.beans.Cat;
 
 public class App {
     public static void main(String[] args) {
         
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext xmlContext = new ClassPathXmlApplicationContext("config.xml");
 
-        Car car = context.getBean("firstCar", Car.class);
-        Car car2 = context.getBean("firstCar", Car.class);
-        Car car3 = context.getBean("secondCar", Car.class);
+        Car car = xmlContext.getBean("firstCar", Car.class);
+        Car car2 = xmlContext.getBean("firstCar", Car.class);
+        Car car3 = xmlContext.getBean("secondCar", Car.class);
 
         System.out.println(car.getMark());
-
         System.out.println(car ==car2);
-
         System.out.println(car3.toString());
 
-        ((ConfigurableApplicationContext) context).close();
+
+        ApplicationContext appContext = new AnnotationConfigApplicationContext("lindx.spring.core");
+
+        System.out.println(appContext.getBean(Cat.class).toString());
+
+        
+
+        ((ConfigurableApplicationContext) xmlContext).close();
+        ((ConfigurableApplicationContext) appContext).close();
     }
 }
