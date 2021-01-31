@@ -11,8 +11,14 @@
     </bean>
 
     <bean id="secondCar" class="lindx.spring.core.beans.Car">
-        <property name="speed" value="290"></property>
-        <property name="mark" value="Ferari"></property>
+        <constructor-arg index="0" value="290"></constructor-arg>
+        <constructor-arg index="1" value="Firari"></constructor-arg>
+        <property name="countries">
+            <list>
+                <value>Russia</value>
+                <value>USA</value>
+            </list>
+        </property>
     </bean>
 
 </beans>  

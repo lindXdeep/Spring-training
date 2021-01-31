@@ -19,7 +19,7 @@ public class App {
 
         System.out.println(car ==car2);
 
-        System.out.println(car3.getMark());
+        System.out.println(car3.toString());
 
         ((ConfigurableApplicationContext) context).close();
     }
