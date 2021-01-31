@@ -1,13 +1,12 @@
 package lindx.spring.core.reflect;
 
-import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-
 public class ReflectionExample {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchFieldException,
+            SecurityException {
         
         // Масисв методов
         for (Method method : Arrays.class.getMethods()){
@@ -25,8 +24,14 @@ public class ReflectionExample {
         System.out.println(r.getClass().getName()); // lindx.spring.core.reflect.ReflectionExample$1
 
         // Создаем обьект с помощью механизма рефлексии
-        Runnable r2 = r.getClass().newInstance();
+        r.getClass().newInstance().run();           // hello
 
-        r2.run();                                   // hello
+        // Доступ к pravate полям
+        Shape shape = new Shape();
+
+        Field square = shape.getClass().getDeclaredField("square");
+                square.setAccessible(true);
+                square.set(shape,5);
+        System.out.println(square.get(shape)); 
     }
 }
