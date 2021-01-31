@@ -11,7 +11,12 @@
         <!-- <property name="address" ref="address" /> -->
     </bean>
 
-    <bean id="address" class="lindx.spring.core.beans.Address" >
+    <bean id="address" class="lindx.spring.core.beans.Address" autowire-candidate="false">
+        <constructor-arg index="0" value="Lenina"></constructor-arg>
+        <constructor-arg index="1" value="5"></constructor-arg>
+    </bean>
+
+    <bean id="address2" class="lindx.spring.core.beans.Address" >
         <constructor-arg index="0" value="Lenina"></constructor-arg>
         <constructor-arg index="1" value="5"></constructor-arg>
     </bean>
