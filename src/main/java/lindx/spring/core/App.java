@@ -29,7 +29,7 @@ public class App {
 
         System.out.println();
 
-        System.out.println(appContext.getBean(DatabaseConnection.class).toString());
+        System.out.println(appContext.getBean("bdBean", DatabaseConnection.class).toString());
 
         ((ConfigurableApplicationContext) xmlContext).close();
         ((ConfigurableApplicationContext) appContext).close();
