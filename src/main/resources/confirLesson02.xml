@@ -8,7 +8,7 @@
     <bean id="house" class="lindx.spring.core.beans.House" autowire="byName">
         <property name="humberOfFlors" value="5" />
         <property name="numderOfFlats" value="200" />
-        <!-- <property name="address" ref="address" /> -->
+        <!-- <property name="address" ref="address" />-->
     </bean>
 
     <bean id="address" class="lindx.spring.core.beans.Address">
