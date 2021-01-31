@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import lindx.spring.core.beans.Car;
 import lindx.spring.core.beans.Cat;
+import lindx.spring.core.beans.DatabaseConnection;
 
 public class App {
     public static void main(String[] args) {
@@ -26,7 +27,9 @@ public class App {
 
         System.out.println(appContext.getBean(Cat.class).toString());
 
-        
+        System.out.println();
+
+        System.out.println(appContext.getBean(DatabaseConnection.class).toString());
 
         ((ConfigurableApplicationContext) xmlContext).close();
         ((ConfigurableApplicationContext) appContext).close();
