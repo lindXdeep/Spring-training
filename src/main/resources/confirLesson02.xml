@@ -21,4 +21,18 @@
         <constructor-arg index="1" value="5"></constructor-arg>
     </bean>
 
+    <bean id="person" class="lindx.spring.core.beans.Person" autowire="byName">
+        <property name="name" value="john" />
+        
+    </bean>
+
+    <bean id="workPalace" class="java.util.LinkedList">
+        <constructor-arg>
+            <list>
+                <value>microsoft</value>
+                <value>Apple</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
