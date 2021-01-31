@@ -2,3 +2,5 @@ bin/
 target/
 .settings/
 .project
+.class
+*.class
