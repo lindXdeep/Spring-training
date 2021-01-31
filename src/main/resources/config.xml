@@ -10,4 +10,9 @@
         <property name="mark" value="BMV"></property>
     </bean>
 
-</beans>
+    <bean id="secondCar" class="lindx.spring.core.beans.Car">
+        <property name="speed" value="290"></property>
+        <property name="mark" value="Ferari"></property>
+    </bean>
+
+</beans>  
