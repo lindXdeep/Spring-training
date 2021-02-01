@@ -8,21 +8,21 @@ import org.springframework.stereotype.Component;
 public class Worker {
 
     private Passport passport; 
+
+    @Value(value = "Microsoft")
     private String prevWorkPalece;
 
-    @Autowired
-    public Worker(Passport passport,  @Value(value = "Microsoft") String prevWorkPalece) {
-        this.passport = passport;
-        this.prevWorkPalece = prevWorkPalece;
-    }
-
-
-
+    // @Autowired
+    // public Worker(Passport passport,  @Value(value = "Microsoft") String prevWorkPalece) {
+    //     this.passport = passport;
+    //     this.prevWorkPalece = prevWorkPalece;
+    // }
 
     public Passport getPassport() {
         return this.passport;
     }
 
+    @Autowired
     public void setPassport(Passport passport) {
         this.passport = passport;
     }
