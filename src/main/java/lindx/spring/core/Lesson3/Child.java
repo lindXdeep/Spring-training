@@ -29,6 +29,7 @@ public class Child {
 
     @Autowired
     public void setParent(Parent parent) {
+        System.out.println(parent.getChild() == null);
         this.parent = parent;
     }
 
@@ -36,8 +37,7 @@ public class Child {
     public String toString() {
         return "{" +
             " name='" + getName() + "'" +
-            ", parent='" + getParent() + "'" +
+            ", parent='" + getParent().getName() + "'" +
             "}";
     }
-
 }
