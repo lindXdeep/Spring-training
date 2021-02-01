@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Passport {
+    
     @Value(value = "123456")
     private int number;
     

@@ -9,9 +9,34 @@ public class Parent {
     private String name;
     private Child child;
 
-    @Autowired
-    public Parent(@Value(value = "batya") String name, Child child) {
+    public Parent(@Value(value = "batya") String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Child getChild() {
+        return this.child;
+    }
+    @Autowired
+    public void setChild(Child child) {
         this.child = child;
     }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " name='" + getName() + "'" +
+            ", child='" + getChild() + "'" +
+            "}";
+    }
+
 }
+

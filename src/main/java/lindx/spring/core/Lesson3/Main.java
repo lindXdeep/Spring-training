@@ -19,6 +19,13 @@ public class Main {
         System.out.println(worker.toString());
         System.out.println(passport.toString());
 
+
+        Parent parent = applicationContext.getBean(Parent.class);
+        Child child = applicationContext.getBean(Child.class);
+
+        System.out.println(parent);
+        System.out.println(child);
+
         ((ConfigurableApplicationContext)applicationContext).close();
     }
 }
