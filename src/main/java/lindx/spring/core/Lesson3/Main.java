@@ -10,8 +10,8 @@ public class Main {
         System.out.println();
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(
-                Worker.class, Passport.class);
-
+                Worker.class, Passport.class, Parent.class, Child.class);
+  
         
         Worker worker = applicationContext.getBean(Worker.class);
         Passport passport = applicationContext.getBean(Passport.class);
