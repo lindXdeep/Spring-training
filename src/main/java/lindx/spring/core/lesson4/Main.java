@@ -10,7 +10,7 @@ public class Main {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(
             Admin.class, AdminService.class, DataBase.class);
-
+ 
         ((ConfigurableApplicationContext)applicationContext).close();
     }
 }
