@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="house" class="lindx.spring.core.beans.House" autowire="byName">
+        <property name="humberOfFlors" value="5" />
+        <property name="numderOfFlats" value="200" />
+        <!-- <property name="address" ref="address" />-->
+    </bean>
+
+    <bean id="address" class="lindx.spring.core.beans.Address">
+        <constructor-arg index="0" value="Lenina"></constructor-arg>
+        <constructor-arg index="1" value="5"></constructor-arg>
+    </bean>
+
+    <bean id="address2" class="lindx.spring.core.beans.Address" primary="true">
+        <constructor-arg index="0" value="Lenina"></constructor-arg>
+        <constructor-arg index="1" value="5"></constructor-arg>
+    </bean>
+
+    <bean id="person" class="lindx.spring.core.beans.Person" autowire="byName">
+        <property name="name" value="john" />
+        
+    </bean>
+
+    <bean id="workPalace" class="java.util.LinkedList">
+        <constructor-arg>
+            <list>
+                <value>microsoft</value>
+                <value>Apple</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
